@@ -13,6 +13,10 @@ library(tidyverse)
 library(haven)
 
 help.spss <- haven::read_spss("helpmkh.sav")
+saveRDS(object=help.spss, file="helpmkh.rds")
+
+helpmkh <- readRDS("helpmkh.rds")
+head(helpmkh)
 
 # the "labelled" variables with "codebook"
 # come in as a "labelled" class
