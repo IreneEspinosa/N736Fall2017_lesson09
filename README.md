@@ -11,6 +11,7 @@ The lesson can be found at [https://melindahiggins2000.github.io/N736Fall2017_le
 `SAS` code:
 
 * see `lesson09_SAScode.sas`
+* output in HTML format [https://melindahiggins2000.github.io/N736Fall2017_lesson09/sasOutput_lesson09.v2.htm](https://melindahiggins2000.github.io/N736Fall2017_lesson09/sasOutput_lesson09.v2.htm)
 
 `SPSS` code and files:
 

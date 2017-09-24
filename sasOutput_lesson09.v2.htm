@@ -1,0 +1,2120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><META content="IE=5.0000" http-equiv="X-UA-Compatible">
+<TITLE>SAS Output</TITLE>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001">
+<META content="text/html; charset=windows-1252" http-equiv=Content-type>
+<STYLE type=text/css>.aftercaption {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; PADDING-TOP: 4pt; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.batch {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 1px solid; FONT-FAMILY: 'SAS Monospace', 'Courier New', Courier, monospace; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-COLLAPSE: separate; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; COLOR: #000000; PADDING-BOTTOM: 7px; FONT-STYLE: normal; PADDING-TOP: 7px; PADDING-LEFT: 7px; BORDER-SPACING: 1px; BORDER-LEFT: #c1c1c1 1px solid; PADDING-RIGHT: 7px; BACKGROUND-COLOR: #fafbfe
+}
+.beforecaption {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.body {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 8px; BACKGROUND-COLOR: #fafbfe; MARGIN-RIGHT: 8px
+}
+.bodydate {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; WIDTH: 100%; VERTICAL-ALIGN: top; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; TEXT-ALIGN: right; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.bycontentfolder {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.byline {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.bylinecontainer {
+	FONT-SIZE: x-small; BORDER-TOP: #000000 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #000000 0px solid; WIDTH: 100%; BORDER-BOTTOM: #000000 0px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BORDER-SPACING: 1px; BORDER-LEFT: #000000 0px solid; BACKGROUND-COLOR: #fafbfe
+}
+.caption {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.cell {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.container {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.contentfolder {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.contentitem {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.contentproclabel {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.contentprocname {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.contents {
+	LIST-STYLE-TYPE: decimal; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 8px; BACKGROUND-COLOR: #fafbfe; MARGIN-RIGHT: 8px
+}
+.contentsdate {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; WIDTH: 100%; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.contenttitle {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: italic; BACKGROUND-COLOR: #fafbfe
+}
+.continued {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; WIDTH: 100%; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.data {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.dataemphasis {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.dataemphasisfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; FONT-STYLE: italic; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.dataempty {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.datafixed {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: 'Courier New', Courier; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.datastrong {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: bold; COLOR: #000000; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.datastrongfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: bold; COLOR: #000000; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.date {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; WIDTH: 100%; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.document {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+A:link {
+	COLOR: #0000ff
+}
+A:visited {
+	COLOR: #800080
+}
+A:active {
+	COLOR: #800080
+}
+.errorbanner {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.errorcontent {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.errorcontentfixed {
+	FONT-SIZE: x-small; FONT-FAMILY: 'Courier New', Courier; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.extendedpage {
+	FONT-SIZE: x-small; BORDER-TOP: #000000 1pt solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #000000 1pt solid; BORDER-BOTTOM: #000000 1pt solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; TEXT-ALIGN: center; BORDER-LEFT: #000000 1pt solid; BACKGROUND-COLOR: #fafbfe
+}
+.fatalbanner {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.fatalcontent {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.fatalcontentfixed {
+	FONT-SIZE: x-small; FONT-FAMILY: 'Courier New', Courier; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.folderaction {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.footer {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.footeremphasis {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.footeremphasisfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.footerempty {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.footerfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.footerstrong {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.footerstrongfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.frame {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.graph {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 1px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-COLLAPSE: separate; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BORDER-SPACING: 1px; BORDER-LEFT: #c1c1c1 1px solid; BACKGROUND-COLOR: #fafbfe
+}
+.header {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.headeremphasis {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #d8dbd3
+}
+.headeremphasisfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #d8dbd3
+}
+.headerempty {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.headerfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.headersandfooters {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #edf2f9
+}
+.headerstrong {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #000000; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #d8dbd3
+}
+.headerstrongfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #000000; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #d8dbd3
+}
+.index {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.indexaction {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.indexitem {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.indexprocname {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.indextitle {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: italic; BACKGROUND-COLOR: #fafbfe
+}
+.layoutcontainer {
+	BORDER-TOP: #000000 0px solid; BORDER-RIGHT: #000000 0px solid; BORDER-BOTTOM: #000000 0px solid; BORDER-SPACING: 30px; BORDER-LEFT: #000000 0px solid
+}
+.layoutregion {
+	BORDER-TOP: #000000 0px solid; BORDER-RIGHT: #000000 0px solid; BORDER-BOTTOM: #000000 0px solid; BORDER-SPACING: 30px; BORDER-LEFT: #000000 0px solid
+}
+.linecontent {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #fafbfe
+}
+.list {
+	LIST-STYLE-TYPE: disc; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list10 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list2 {
+	LIST-STYLE-TYPE: circle; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list3 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list4 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list5 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list6 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list7 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list8 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list9 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem {
+	LIST-STYLE-TYPE: disc; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem10 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem2 {
+	LIST-STYLE-TYPE: circle; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem3 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem4 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem5 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem6 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem7 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem8 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem9 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.note {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.notebanner {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.notecontent {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.notecontentfixed {
+	FONT-SIZE: x-small; FONT-FAMILY: 'Courier New', Courier; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.output {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 1px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-COLLAPSE: separate; BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BORDER-SPACING: 1px; BORDER-LEFT: #c1c1c1 1px solid; BACKGROUND-COLOR: #fafbfe
+}
+.pageno {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; VERTICAL-ALIGN: top; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; TEXT-ALIGN: right; BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.pages {
+	LIST-STYLE-TYPE: decimal; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 8px; BACKGROUND-COLOR: #fafbfe; MARGIN-RIGHT: 8px
+}
+.pagesdate {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; WIDTH: 100%; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.pagesitem {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: 6pt
+}
+.pagesproclabel {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.pagesprocname {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.pagestitle {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: italic; BACKGROUND-COLOR: #fafbfe
+}
+.paragraph {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.parskip {
+	FONT-SIZE: x-small; BORDER-TOP: #000000 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #000000 0px solid; BORDER-BOTTOM: #000000 0px solid; FONT-WEIGHT: bold; FONT-STYLE: normal; BORDER-SPACING: 0px; BORDER-LEFT: #000000 0px solid
+}
+.prepage {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; TEXT-ALIGN: left; BACKGROUND-COLOR: #fafbfe
+}
+.proctitle {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.proctitlefixed {
+	FONT-SIZE: x-small; FONT-FAMILY: 'Courier New', Courier, monospace; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.rowfooter {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowfooteremphasis {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowfooteremphasisfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowfooterempty {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowfooterfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowfooterstrong {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowfooterstrongfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheader {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheaderemphasis {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheaderemphasisfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheaderempty {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheaderfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheaderstrong {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheaderstrongfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: 'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.systemfooter {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter10 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter2 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter3 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter4 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter5 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter6 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter7 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter8 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter9 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle10 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle2 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle3 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle4 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle5 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle6 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle7 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle8 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle9 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.systitleandfootercontainer {
+	FONT-SIZE: x-small; BORDER-TOP: #000000 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #000000 0px solid; WIDTH: 100%; BORDER-BOTTOM: #000000 0px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BORDER-SPACING: 1px; BORDER-LEFT: #000000 0px solid; BACKGROUND-COLOR: #fafbfe
+}
+.table {
+	BORDER-TOP: #c1c1c1 1px solid; BORDER-RIGHT: #c1c1c1 0px solid; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: #c1c1c1 0px solid; BORDER-SPACING: 0px; BORDER-LEFT: #c1c1c1 1px solid
+}
+.top_stacked_value {
+	BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-BOTTOM: 1px; BORDER-LEFT: 0px
+}
+.middle_stacked_value {
+	BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-LEFT: 0px
+}
+.bottom_stacked_value {
+	BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-TOP: 1px; BORDER-LEFT: 0px
+}
+.titleandnotecontainer {
+	FONT-SIZE: x-small; BORDER-TOP: #000000 0px solid; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #000000 0px solid; WIDTH: 100%; BORDER-BOTTOM: #000000 0px solid; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BORDER-SPACING: 1px; BORDER-LEFT: #000000 0px solid; BACKGROUND-COLOR: #fafbfe
+}
+.titlesandfooters {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.usertext {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.warnbanner {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.warncontent {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.warncontentfixed {
+	FONT-SIZE: x-small; FONT-FAMILY: 'Courier New', Courier; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.l {
+	TEXT-ALIGN: left
+}
+.c {
+	TEXT-ALIGN: center
+}
+.r {
+	TEXT-ALIGN: right
+}
+.d {
+	TEXT-ALIGN: right
+}
+.j {
+	TEXT-ALIGN: justify
+}
+.t {
+	VERTICAL-ALIGN: top
+}
+.m {
+	VERTICAL-ALIGN: middle
+}
+.b {
+	VERTICAL-ALIGN: bottom
+}
+TD {
+	VERTICAL-ALIGN: top
+}
+TH {
+	VERTICAL-ALIGN: top
+}
+.stacked_cell {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px
+}
+</STYLE>
+
+<SCRIPT language=javascript type=text/javascript>
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+<BODY class=body onload=startup() onunload=shutdown()>
+<SCRIPT language=javascript type=text/javascript>
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</SCRIPT>
+
+<DIV class=branch><A name=IDX></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="c systemtitle">The SAS System</TD></TR></TBODY></TABLE><BR>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Datasets: Directory Information" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=2 scope=colgroup>Directory</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Libref</TH>
+    <TD class="l data">LIBRARY</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Engine</TH>
+    <TD class="l data">V9</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Physical Name</TH>
+    <TD class="l data">C:\MyGithub\N736Fall2017_lesson09</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Filename</TH>
+    <TD 
+class="l data">C:\MyGithub\N736Fall2017_lesson09</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX1></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Datasets: Library Members" frame=box>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="r b header" scope=col>#</TH>
+    <TH class="l b header" scope=col>Name</TH>
+    <TH class="l b header" scope=col>Member Type</TH>
+    <TH class="r b header" scope=col>File Size</TH>
+    <TH class="l b header" scope=col>Last Modified</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="r rowheader" scope=row>1</TH>
+    <TD class="l data">FORMATS</TD>
+    <TD class="l data">CATALOG</TD>
+    <TD class="r data">33792</TD>
+    <TD class="l data">09/24/2017 18:38:37</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>2</TH>
+    <TD class="l data">HELPMKH</TD>
+    <TD class="l data">DATA</TD>
+    <TD class="r data">361472</TD>
+    <TD class="l data">09/24/2017 
+18:37:07</TD></TR></TBODY></TABLE></DIV></DIV><BR></DIV>
+<DIV class=branch>
+<P style="PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3>
+<A name=IDX2></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="c systemtitle">The SAS System</TD></TR></TBODY></TABLE><BR>
+<DIV class="c proctitle">The CONTENTS Procedure</DIV>
+<P>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Contents: Attributes" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Data Set Name</TH>
+    <TD class="l data">WORK.HELPMKH</TD>
+    <TH class="l rowheader" scope=row>Observations</TH>
+    <TD class="l data">453</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Member Type</TH>
+    <TD class="l data">DATA</TD>
+    <TH class="l rowheader" scope=row>Variables</TH>
+    <TD class="l data">88</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Engine</TH>
+    <TD class="l data">V9</TD>
+    <TH class="l rowheader" scope=row>Indexes</TH>
+    <TD class="l data">0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Created</TH>
+    <TD class="l data">09/24/2017 18:38:38</TD>
+    <TH class="l rowheader" scope=row>Observation Length</TH>
+    <TD class="l data">704</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Last Modified</TH>
+    <TD class="l data">09/24/2017 18:38:38</TD>
+    <TH class="l rowheader" scope=row>Deleted Observations</TH>
+    <TD class="l data">0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Protection</TH>
+    <TD class="l data">&nbsp;</TD>
+    <TH class="l rowheader" scope=row>Compressed</TH>
+    <TD class="l data">NO</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Data Set Type</TH>
+    <TD class="l data">&nbsp;</TD>
+    <TH class="l rowheader" scope=row>Sorted</TH>
+    <TD class="l data">NO</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Label</TH>
+    <TD class="l data">&nbsp;</TD>
+    <TH class="l rowheader" scope=row>&nbsp;</TH>
+    <TD class="l data">&nbsp;</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Data Representation</TH>
+    <TD class="l data">WINDOWS_64</TD>
+    <TH class="l rowheader" scope=row>&nbsp;</TH>
+    <TD class="l data">&nbsp;</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Encoding</TH>
+    <TD class="l data">wlatin1 Western (Windows)</TD>
+    <TH class="l rowheader" scope=row>&nbsp;</TH>
+    <TD class="l data">&nbsp;</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX3></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Contents: Engine/Host Information" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=2 scope=colgroup>Engine/Host Dependent 
+      Information</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Data Set Page Size</TH>
+    <TD class="l data">65536</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Number of Data Set Pages</TH>
+    <TD class="l data">6</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>First Data Page</TH>
+    <TD class="l data">1</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Max Obs per Page</TH>
+    <TD class="l data">93</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Obs in First Data Page</TH>
+    <TD class="l data">73</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Number of Data Set Repairs</TH>
+    <TD class="l data">0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>ExtendObsCounter</TH>
+    <TD class="l data">YES</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Filename</TH>
+    <TD class="l data">C:\Users\MKHIGGI\AppData\Local\Temp\SAS Temporary 
+      Files\_TD1196_SON-HIGGINS_\helpmkh.sas7bdat</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Release Created</TH>
+    <TD class="l data">9.0401M1</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Host Created</TH>
+    <TD class="l data">X64_8PRO</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX4></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Contents: Variables" frame=box>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=6 scope=colgroup>Alphabetic List of 
+      Variables and Attributes</TH></TR>
+  <TR>
+    <TH class="r b header" scope=col>#</TH>
+    <TH class="l b header" scope=col>Variable</TH>
+    <TH class="l b header" scope=col>Type</TH>
+    <TH class="r b header" scope=col>Len</TH>
+    <TH class="l b header" scope=col>Format</TH>
+    <TH class="l b header" scope=col>Label</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="r rowheader" scope=row>8</TH>
+    <TD class="l data">a15a</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Number of nights in overnigh shelter in past 6 
+  months</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>9</TH>
+    <TD class="l data">a15b</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Number of nights on the street in past 6 months</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>3</TH>
+    <TD class="l data">age</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Age at baseline (in years)</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>45</TH>
+    <TD class="l data">anysubstatus</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">ANYSUBSTATUS.</TD>
+    <TD class="l data">Use of any substance post-detox</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>37</TH>
+    <TD class="l data">cesd</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">CESD total score - Baseline</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>54</TH>
+    <TD class="l data">cesd1</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">CESD total score - 6mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>64</TH>
+    <TD class="l data">cesd2</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">CESD total score - 12mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>74</TH>
+    <TD class="l data">cesd3</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">CESD total score - 18mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>84</TH>
+    <TD class="l data">cesd4</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">CESD total score - 24mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>10</TH>
+    <TD class="l data">d1</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">How many times hospitalized for medical problems 
+      (lifetime)</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>46</TH>
+    <TD class="l data">daysanysub</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Time (in days) to first use of any substance 
+    post-detox</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>44</TH>
+    <TD class="l data">daysdrink</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Time (in days) to first alcoholic drink 
+post-detox</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>48</TH>
+    <TD class="l data">dayslink</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Time (in days) to linkage to primary care</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>43</TH>
+    <TD class="l data">drinkstatus</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">DRINKSTATUS.</TD>
+    <TD class="l data">Use of alcohol post-detox</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>39</TH>
+    <TD class="l data">drugrisk</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Risk Assessment Battery (RAB) drug risk score - 
+    Baseline</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>56</TH>
+    <TD class="l data">drugrisk1</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Risk Assessment Battery (RAB) drug risk score - 
+  6mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>66</TH>
+    <TD class="l data">drugrisk2</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Risk Assessment Battery (RAB) drug risk score - 
+  12mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>76</TH>
+    <TD class="l data">drugrisk3</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Risk Assessment Battery (RAB) drug risk score - 
+  18mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>86</TH>
+    <TD class="l data">drugrisk4</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Risk Assessment Battery (RAB) drug risk score - 
+  24mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>11</TH>
+    <TD class="l data">e2b</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Number of times in past 6 months entered a detox 
+      program - Baseline</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>49</TH>
+    <TD class="l data">e2b1</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Number of times in past 6 months entered a detox 
+      program - 6mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>59</TH>
+    <TD class="l data">e2b2</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Number of times in past 6 months entered a detox 
+      program - 12mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>69</TH>
+    <TD class="l data">e2b3</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Number of times in past 6 months entered a detox 
+      program - 18mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>79</TH>
+    <TD class="l data">e2b4</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Number of times in past 6 months entered a detox 
+      program - 24mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>17</TH>
+    <TD class="l data">f1a</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">F1A.</TD>
+    <TD class="l data">CESD 1 - I was bothered by things that usually don't 
+      bother me</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>18</TH>
+    <TD class="l data">f1b</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">F1B.</TD>
+    <TD class="l data">CESD 2 - I did not feel like eating; my appetite was 
+      poor</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>19</TH>
+    <TD class="l data">f1c</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">F1C.</TD>
+    <TD class="l data">CESD 3 - I felt that I could not shake off the blues 
+      even with help from my family or friends</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>20</TH>
+    <TD class="l data">f1d</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">F1D.</TD>
+    <TD class="l data">CESD 4 - I felt that I was just as good as other 
+    people</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>21</TH>
+    <TD class="l data">f1e</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">F1E.</TD>
+    <TD class="l data">CESD 5 - I had trouble keeping my mind on what I was 
+      doing</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>22</TH>
+    <TD class="l data">f1f</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">F1F.</TD>
+    <TD class="l data">CESD 6 - I felt depressed</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>23</TH>
+    <TD class="l data">f1g</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">F1G.</TD>
+    <TD class="l data">CESD 7 - I felt that everything I did was an 
+  effort</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>24</TH>
+    <TD class="l data">f1h</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">F1H.</TD>
+    <TD class="l data">CESD 8 - I felt hopeful about the future</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>25</TH>
+    <TD class="l data">f1i</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">F1I.</TD>
+    <TD class="l data">CESD 9 - I thought my life had been a failure</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>26</TH>
+    <TD class="l data">f1j</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">F1J.</TD>
+    <TD class="l data">CESD 10 - I felt fearful</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>27</TH>
+    <TD class="l data">f1k</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">F1K.</TD>
+    <TD class="l data">CESD 11 - My sleep was restless</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>28</TH>
+    <TD class="l data">f1l</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">F1L.</TD>
+    <TD class="l data">CESD 12 - I was happy</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>29</TH>
+    <TD class="l data">f1m</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">F1M.</TD>
+    <TD class="l data">CESD 13 - I talked less than usual</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>30</TH>
+    <TD class="l data">f1n</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">F1N.</TD>
+    <TD class="l data">CESD 14 - I felt lonely</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>31</TH>
+    <TD class="l data">f1o</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">F1O.</TD>
+    <TD class="l data">CESD 15 - People were unfriendly</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>32</TH>
+    <TD class="l data">f1p</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">F1P.</TD>
+    <TD class="l data">CESD 16 - I enjoyed life</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>33</TH>
+    <TD class="l data">f1q</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">F1Q.</TD>
+    <TD class="l data">CESD 17 - I had crying spells</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>34</TH>
+    <TD class="l data">f1r</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">F1R.</TD>
+    <TD class="l data">CESD 18 - I felt sad</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>35</TH>
+    <TD class="l data">f1s</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">F1S.</TD>
+    <TD class="l data">CESD 19 - I felt that people dislike me</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>36</TH>
+    <TD class="l data">f1t</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">F1T.</TD>
+    <TD class="l data">CESD 20 - I could not get going</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>4</TH>
+    <TD class="l data">female</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">FEMALE.</TD>
+    <TD class="l data">Gender of respondent</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>12</TH>
+    <TD class="l data">g1b</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">G1B.</TD>
+    <TD class="l data">Experienced serious thoughts of suicide (last 30 days) 
+      - Baseline</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>50</TH>
+    <TD class="l data">g1b1</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Experienced serious thoughts of suicide (last 30 days) 
+      - 6mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>60</TH>
+    <TD class="l data">g1b2</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Experienced serious thoughts of suicide (last 30 days) 
+      - 12mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>70</TH>
+    <TD class="l data">g1b3</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Experienced serious thoughts of suicide (last 30 days) 
+      - 18mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>80</TH>
+    <TD class="l data">g1b4</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Experienced serious thoughts of suicide (last 30 days) 
+      - 24mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>7</TH>
+    <TD class="l data">homeless</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">HOMELESS.</TD>
+    <TD class="l data">One or more nights on the street or shelter in past 6 
+      months</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>13</TH>
+    <TD class="l data">i1</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Average number of drinks (standard units) consumed per 
+      day (in past 30 days) - Baseline</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>14</TH>
+    <TD class="l data">i2</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Maximum number of drinks (standard units) consumed per 
+      day (in past 30 days)</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>51</TH>
+    <TD class="l data">i11</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Average number of drinks (standard units) consumed per 
+      day (in past 30 days) - 6mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>61</TH>
+    <TD class="l data">i12</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Average number of drinks (standard units) consumed per 
+      day (in past 30 days) - 12mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>71</TH>
+    <TD class="l data">i13</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Average number of drinks (standard units) consumed per 
+      day (in past 30 days) - 18mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>81</TH>
+    <TD class="l data">i14</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Average number of drinks (standard units) consumed per 
+      day (in past 30 days) - 24mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>1</TH>
+    <TD class="l data">id</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Subject ID</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>38</TH>
+    <TD class="l data">indtot</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Inventory of Drug Use Consequences (InDue) total score 
+      - Baseline</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>55</TH>
+    <TD class="l data">indtot1</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Inventory of Drug Use Consequences (InDue) total score 
+      - 6mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>65</TH>
+    <TD class="l data">indtot2</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Inventory of Drug Use Consequences (InDue) total score 
+      - 12mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>75</TH>
+    <TD class="l data">indtot3</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Inventory of Drug Use Consequences (InDue) total score 
+      - 18mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>85</TH>
+    <TD class="l data">indtot4</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Inventory of Drug Use Consequences (InDue) total score 
+      - 24mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>47</TH>
+    <TD class="l data">linkstatus</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">LINKSTATUS.</TD>
+    <TD class="l data">Post-detox linkage to primary care</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>16</TH>
+    <TD class="l data">mcs</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">SF36 Mental Composite Score - Baseline</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>53</TH>
+    <TD class="l data">mcs1</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">SF36 Mental Composite Score - 6mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>63</TH>
+    <TD class="l data">mcs2</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">SF36 Mental Composite Score - 12mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>73</TH>
+    <TD class="l data">mcs3</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">SF36 Mental Composite Score - 18mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>83</TH>
+    <TD class="l data">mcs4</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">SF36 Mental Composite Score - 24mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>58</TH>
+    <TD class="l data">pcrec1</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Number of primary care visits in past 6 months - 
+  6mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>68</TH>
+    <TD class="l data">pcrec2</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Number of primary care visits in past 6 months - 
+  12mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>78</TH>
+    <TD class="l data">pcrec3</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Number of primary care visits in past 6 months - 
+  18mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>88</TH>
+    <TD class="l data">pcrec4</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Number of primary care visits in past 6 months - 
+  24mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>15</TH>
+    <TD class="l data">pcs</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">SF36 Physical Composite Score - Baseline</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>52</TH>
+    <TD class="l data">pcs1</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">SF36 Physical Composite Score - 6mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>62</TH>
+    <TD class="l data">pcs2</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">SF36 Physical Composite Score - 12mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>72</TH>
+    <TD class="l data">pcs3</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">SF36 Physical Composite Score - 18mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>82</TH>
+    <TD class="l data">pcs4</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">SF36 Physical Composite Score - 24mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>5</TH>
+    <TD class="l data">pss_fr</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Perceived Social Support - friends</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>6</TH>
+    <TD class="l data">racegrp</TD>
+    <TD class="l data">Char</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Racial Group of Respondent</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>41</TH>
+    <TD class="l data">satreat</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">SATREAT.</TD>
+    <TD class="l data">Any BSAS substance abuse treatment at baseline</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>40</TH>
+    <TD class="l data">sexrisk</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Risk Assessment Battery (RAB) sex risk score - 
+    Baseline</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>57</TH>
+    <TD class="l data">sexrisk1</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Risk Assessment Battery (RAB) sex risk score - 
+6mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>67</TH>
+    <TD class="l data">sexrisk2</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Risk Assessment Battery (RAB) sex risk score - 
+  12mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>77</TH>
+    <TD class="l data">sexrisk3</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Risk Assessment Battery (RAB) sex risk score - 
+  18mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>87</TH>
+    <TD class="l data">sexrisk4</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Risk Assessment Battery (RAB) sex risk score - 
+  24mo</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>42</TH>
+    <TD class="l data">substance</TD>
+    <TD class="l data">Char</TD>
+    <TD class="r data">7</TD>
+    <TD class="l data">&nbsp;</TD>
+    <TD class="l data">Primary substance of abuse</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>2</TH>
+    <TD class="l data">treat</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">TREAT.</TD>
+    <TD class="l data">Randomization 
+Group</TD></TR></TBODY></TABLE></DIV></DIV><BR></DIV>
+<DIV class=branch>
+<P style="PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3>
+<A name=IDX5></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="c systemtitle">The SAS System</TD></TR></TBODY></TABLE><BR>
+<DIV class="c proctitle">The UNIVARIATE Procedure</DIV>
+<DIV class="c proctitle">Variable: i1 (Average number of drinks (standard units) 
+consumed per day (in past 30 days) - Baseline)</DIV>
+<P>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Moments" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=4 scope=colgroup>Moments</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>N</TH>
+    <TD class="r data">453</TD>
+    <TH class="l rowheader" scope=row>Sum Weights</TH>
+    <TD class="r data">453</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Mean</TH>
+    <TD class="r data">17.9072848</TD>
+    <TH class="l rowheader" scope=row>Sum Observations</TH>
+    <TD class="r data">8112</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Std Deviation</TH>
+    <TD class="r data">20.020239</TD>
+    <TH class="l rowheader" scope=row>Variance</TH>
+    <TD class="r data">400.809969</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Skewness</TH>
+    <TD class="r data">2.10217179</TD>
+    <TH class="l rowheader" scope=row>Kurtosis</TH>
+    <TD class="r data">6.93741425</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Uncorrected SS</TH>
+    <TD class="r data">326430</TD>
+    <TH class="l rowheader" scope=row>Corrected SS</TH>
+    <TD class="r data">181166.106</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Coeff Variation</TH>
+    <TD class="r data">111.799411</TD>
+    <TH class="l rowheader" scope=row>Std Error Mean</TH>
+    <TD class="r data">0.94063288</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX6></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Basic Measures of Location and Variability" 
+frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=4 scope=colgroup>Basic Statistical 
+    Measures</TH></TR>
+  <TR>
+    <TH class="c b header" colSpan=2 scope=colgroup>Location</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Variability</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Mean</TH>
+    <TD class="r data">17.90728</TD>
+    <TH class="l rowheader" scope=row>Std Deviation</TH>
+    <TD class="r data">20.02024</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Median</TH>
+    <TD class="r data">13.00000</TD>
+    <TH class="l rowheader" scope=row>Variance</TH>
+    <TD class="r data">400.80997</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Mode</TH>
+    <TD class="r data">0.00000</TD>
+    <TH class="l rowheader" scope=row>Range</TH>
+    <TD class="r data">142.00000</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>&nbsp;</TH>
+    <TD class="r data">&nbsp;</TD>
+    <TH class="l rowheader" scope=row>Interquartile Range</TH>
+    <TD class="r data">23.00000</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX7></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Tests For Location" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=5 
+      scope=colgroup>Tests&nbsp;for&nbsp;Location:&nbsp;Mu0=0</TH></TR>
+  <TR>
+    <TH class="l b header" scope=col>Test</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Statistic</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>p Value</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Student's t</TH>
+    <TH class="l rowheader" scope=row>t</TH>
+    <TD class="r data">19.03749</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; |t|</TH>
+    <TD class="r data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Sign</TH>
+    <TH class="l rowheader" scope=row>M</TH>
+    <TD class="r data">192.5</TD>
+    <TH class="l rowheader" scope=row>Pr &gt;= |M|</TH>
+    <TD class="r data">&lt;.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Signed Rank</TH>
+    <TH class="l rowheader" scope=row>S</TH>
+    <TD class="r data">37152.5</TD>
+    <TH class="l rowheader" scope=row>Pr &gt;= |S|</TH>
+    <TD class="r data">&lt;.0001</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX8></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Tests For Normality" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=5 scope=colgroup>Tests for Normality</TH></TR>
+  <TR>
+    <TH class="l b header" scope=col>Test</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Statistic</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>p Value</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Shapiro-Wilk</TH>
+    <TH class="l rowheader" scope=row>W</TH>
+    <TD class="r data">0.802112</TD>
+    <TH class="l rowheader" scope=row>Pr &lt; W</TH>
+    <TD class="r data">&lt;0.0001</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Kolmogorov-Smirnov</TH>
+    <TH class="l rowheader" scope=row>D</TH>
+    <TD class="r data">0.185538</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; D</TH>
+    <TD class="r data">&lt;0.0100</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Cramer-von Mises</TH>
+    <TH class="l rowheader" scope=row>W-Sq</TH>
+    <TD class="r data">3.482712</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; W-Sq</TH>
+    <TD class="r data">&lt;0.0050</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Anderson-Darling</TH>
+    <TH class="l rowheader" scope=row>A-Sq</TH>
+    <TD class="r data">20.92816</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; A-Sq</TH>
+    <TD class="r data">&lt;0.0050</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX9></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Quantiles" frame=box>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=2 
+      scope=colgroup>Quantiles&nbsp;(Definition&nbsp;5)</TH></TR>
+  <TR>
+    <TH class="l b header" scope=col>Level</TH>
+    <TH class="r b header" scope=col>Quantile</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>100% Max</TH>
+    <TD class="r data">142</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>99%</TH>
+    <TD class="r data">102</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>95%</TH>
+    <TD class="r data">56</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>90%</TH>
+    <TD class="r data">43</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>75% Q3</TH>
+    <TD class="r data">26</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>50% Median</TH>
+    <TD class="r data">13</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>25% Q1</TH>
+    <TD class="r data">3</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>10%</TH>
+    <TD class="r data">0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>5%</TH>
+    <TD class="r data">0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>1%</TH>
+    <TD class="r data">0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>0% Min</TH>
+    <TD class="r data">0</TD></TR></TBODY></TABLE></DIV></DIV><BR><A name=IDX10></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Extreme Observations" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=4 scope=colgroup>Extreme Observations</TH></TR>
+  <TR>
+    <TH class="c b header" colSpan=2 scope=colgroup>Lowest</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Highest</TH></TR>
+  <TR>
+    <TH class="r b header" scope=col>Value</TH>
+    <TH class="r b header" scope=col>Obs</TH>
+    <TH class="r b header" scope=col>Value</TH>
+    <TH class="r b header" scope=col>Obs</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TD class="r data">0</TD>
+    <TD class="r data">449</TD>
+    <TD class="r data">102</TD>
+    <TD class="r data">74</TD></TR>
+  <TR>
+    <TD class="r data">0</TD>
+    <TD class="r data">448</TD>
+    <TD class="r data">102</TD>
+    <TD class="r data">177</TD></TR>
+  <TR>
+    <TD class="r data">0</TD>
+    <TD class="r data">437</TD>
+    <TD class="r data">102</TD>
+    <TD class="r data">224</TD></TR>
+  <TR>
+    <TD class="r data">0</TD>
+    <TD class="r data">422</TD>
+    <TD class="r data">134</TD>
+    <TD class="r data">244</TD></TR>
+  <TR>
+    <TD class="r data">0</TD>
+    <TD class="r data">416</TD>
+    <TD class="r data">142</TD>
+    <TD class="r data">286</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX11></A>
+<DIV>
+<DIV class=c><IMG class=c style="HEIGHT: 640px; WIDTH: 640px" border=0 
+alt="Plots for i1" src="sasOutput_lesson09.v2_files/Plots4.png"> 
+</DIV></DIV><BR>
+<P style="PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3>
+<A name=IDX12></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="c systemtitle">The SAS System</TD></TR></TBODY></TABLE><BR>
+<DIV class="c proctitle">The UNIVARIATE Procedure</DIV>
+<P>
+<DIV>
+<DIV class=c><IMG class=c style="HEIGHT: 480px; WIDTH: 640px" border=0 
+alt="Histogram for i1" src="sasOutput_lesson09.v2_files/Histogram4.png"> 
+</DIV></DIV><BR>
+<P style="PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3>
+<A name=IDX13></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="c systemtitle">The SAS System</TD></TR></TBODY></TABLE><BR>
+<DIV class="c proctitle">The UNIVARIATE Procedure</DIV>
+<DIV class="c proctitle">Fitted Normal Distribution for i1 (Average number of 
+drinks (standard units) consumed per day (in past 30 days) - Baseline)</DIV>
+<P>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Parameter Estimates" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=3 scope=colgroup>Parameters for Normal 
+      Distribution</TH></TR>
+  <TR>
+    <TH class="l b header" scope=col>Parameter</TH>
+    <TH class="l b header" scope=col>Symbol</TH>
+    <TH class="r b header" scope=col>Estimate</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Mean</TH>
+    <TD class="l data">Mu</TD>
+    <TD class="r data">17.90728</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Std Dev</TH>
+    <TD class="l data">Sigma</TD>
+    <TD class="r data">20.02024</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX14></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Goodness of Fit" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=5 scope=colgroup>Goodness-of-Fit Tests for 
+      Normal Distribution</TH></TR>
+  <TR>
+    <TH class="l b header" scope=col>Test</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Statistic</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>p Value</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Kolmogorov-Smirnov</TH>
+    <TH class="l rowheader" scope=row>D</TH>
+    <TD class="r data">0.1855382</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; D</TH>
+    <TD class="r data">&lt;0.010</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Cramer-von Mises</TH>
+    <TH class="l rowheader" scope=row>W-Sq</TH>
+    <TD class="r data">3.4827117</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; W-Sq</TH>
+    <TD class="r data">&lt;0.005</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Anderson-Darling</TH>
+    <TH class="l rowheader" scope=row>A-Sq</TH>
+    <TD class="r data">20.9281602</TD>
+    <TH class="l rowheader" scope=row>Pr &gt; A-Sq</TH>
+    <TD class="r data">&lt;0.005</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX15></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Univariate: Quantiles" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=3 scope=colgroup>Quantiles for Normal 
+      Distribution</TH></TR>
+  <TR>
+    <TH class="r b header" rowSpan=2 scope=col>Percent</TH>
+    <TH class="c b header" colSpan=2 scope=colgroup>Quantile</TH></TR>
+  <TR>
+    <TH class="r b header" scope=col>Observed</TH>
+    <TH class="r b header" scope=col>Estimated</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="r rowheader" scope=row>1.0</TH>
+    <TD class="r data">0.000</TD>
+    <TD class="r data" noWrap>-28.66676</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>5.0</TH>
+    <TD class="r data">0.000</TD>
+    <TD class="r data" noWrap>-15.02308</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>10.0</TH>
+    <TD class="r data">0.000</TD>
+    <TD class="r data" noWrap>-7.74968</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>25.0</TH>
+    <TD class="r data">3.000</TD>
+    <TD class="r data">4.40384</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>50.0</TH>
+    <TD class="r data">13.000</TD>
+    <TD class="r data">17.90728</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>75.0</TH>
+    <TD class="r data">26.000</TD>
+    <TD class="r data">31.41073</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>90.0</TH>
+    <TD class="r data">43.000</TD>
+    <TD class="r data">43.56425</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>95.0</TH>
+    <TD class="r data">56.000</TD>
+    <TD class="r data">50.83765</TD></TR>
+  <TR>
+    <TH class="r rowheader" scope=row>99.0</TH>
+    <TD class="r data">102.000</TD>
+    <TD class="r data">64.48133</TD></TR></TBODY></TABLE></DIV></DIV><BR>
+<P style="PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3>
+<A name=IDX16></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="c systemtitle">The SAS System</TD></TR></TBODY></TABLE><BR>
+<DIV class="c proctitle">The UNIVARIATE Procedure</DIV>
+<P>
+<DIV>
+<DIV class=c><IMG class=c style="HEIGHT: 480px; WIDTH: 640px" border=0 
+alt="Q-Q plot for i1" src="sasOutput_lesson09.v2_files/QQPlot6.png"> 
+</DIV></DIV><BR></DIV>
+<DIV class=branch>
+<P style="PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3>
+<A name=IDX17></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="c systemtitle">The SAS System</TD></TR></TBODY></TABLE><BR>
+<DIV class="c proctitle">The MEANS Procedure</DIV>
+<P>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Means: Summary statistics" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=4 scope=colgroup>Analysis Variable : i1 
+      Average number of drinks (standard units) consumed per day (in past 30 
+      days) - Baseline</TH></TR>
+  <TR>
+    <TH class="r b header" scope=col>Mean</TH>
+    <TH class="r b header" scope=col>Std Dev</TH>
+    <TH class="r b header" scope=col>Lower 95%<BR>CL for Mean</TH>
+    <TH class="r b header" scope=col>Upper 95%<BR>CL for Mean</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TD class="r data">17.9072848</TD>
+    <TD class="r data">20.0202390</TD>
+    <TD class="r data">16.0587284</TD>
+    <TD class="r data">19.7558412</TD></TR></TBODY></TABLE></DIV></DIV><BR></DIV>
+<DIV class=branch>
+<P style="PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3>
+<A name=IDX18></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="c systemtitle">The SAS System</TD></TR></TBODY></TABLE><BR>
+<DIV class="c proctitle">The MEANS Procedure</DIV>
+<P>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Means: Summary statistics" frame=box>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" scope=col>Analysis Variable : i1 Average number of 
+      drinks (standard units) consumed per day (in past 30 days) - 
+Baseline</TH></TR>
+  <TR>
+    <TH class="r b header" scope=col>Mean</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TD class="r data">17.9072848</TD></TR></TBODY></TABLE></DIV></DIV><BR></DIV>
+<DIV class=branch>
+<P style="PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3>
+<A name=IDX19></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="c systemtitle">The SAS System</TD></TR></TBODY></TABLE><BR>
+<DIV class="c proctitle">The CONTENTS Procedure</DIV>
+<P>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Contents: Attributes" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Data Set Name</TH>
+    <TD class="l data">WORK.I1OUT</TD>
+    <TH class="l rowheader" scope=row>Observations</TH>
+    <TD class="l data">1</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Member Type</TH>
+    <TD class="l data">DATA</TD>
+    <TH class="l rowheader" scope=row>Variables</TH>
+    <TD class="l data">1</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Engine</TH>
+    <TD class="l data">V9</TD>
+    <TH class="l rowheader" scope=row>Indexes</TH>
+    <TD class="l data">0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Created</TH>
+    <TD class="l data">09/24/2017 18:39:06</TD>
+    <TH class="l rowheader" scope=row>Observation Length</TH>
+    <TD class="l data">8</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Last Modified</TH>
+    <TD class="l data">09/24/2017 18:39:06</TD>
+    <TH class="l rowheader" scope=row>Deleted Observations</TH>
+    <TD class="l data">0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Protection</TH>
+    <TD class="l data">&nbsp;</TD>
+    <TH class="l rowheader" scope=row>Compressed</TH>
+    <TD class="l data">NO</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Data Set Type</TH>
+    <TD class="l data">&nbsp;</TD>
+    <TH class="l rowheader" scope=row>Sorted</TH>
+    <TD class="l data">NO</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Label</TH>
+    <TD class="l data">&nbsp;</TD>
+    <TH class="l rowheader" scope=row>&nbsp;</TH>
+    <TD class="l data">&nbsp;</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Data Representation</TH>
+    <TD class="l data">WINDOWS_64</TD>
+    <TH class="l rowheader" scope=row>&nbsp;</TH>
+    <TD class="l data">&nbsp;</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Encoding</TH>
+    <TD class="l data">wlatin1 Western (Windows)</TD>
+    <TH class="l rowheader" scope=row>&nbsp;</TH>
+    <TD class="l data">&nbsp;</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX20></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Contents: Engine/Host Information" frame=box>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=2 scope=colgroup>Engine/Host Dependent 
+      Information</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>Data Set Page Size</TH>
+    <TD class="l data">65536</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Number of Data Set Pages</TH>
+    <TD class="l data">1</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>First Data Page</TH>
+    <TD class="l data">1</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Max Obs per Page</TH>
+    <TD class="l data">8063</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Obs in First Data Page</TH>
+    <TD class="l data">1</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Number of Data Set Repairs</TH>
+    <TD class="l data">0</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>ExtendObsCounter</TH>
+    <TD class="l data">YES</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Filename</TH>
+    <TD class="l data">C:\Users\MKHIGGI\AppData\Local\Temp\SAS Temporary 
+      Files\_TD1196_SON-HIGGINS_\i1out.sas7bdat</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Release Created</TH>
+    <TD class="l data">9.0401M1</TD></TR>
+  <TR>
+    <TH class="l rowheader" scope=row>Host Created</TH>
+    <TD class="l data">X64_8PRO</TD></TR></TBODY></TABLE></DIV></DIV><BR><A 
+name=IDX21></A>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Contents: Variables" frame=box>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="c b header" colSpan=5 scope=colgroup>Alphabetic List of 
+      Variables and Attributes</TH></TR>
+  <TR>
+    <TH class="r b header" scope=col>#</TH>
+    <TH class="l b header" scope=col>Variable</TH>
+    <TH class="l b header" scope=col>Type</TH>
+    <TH class="r b header" scope=col>Len</TH>
+    <TH class="l b header" scope=col>Label</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="r rowheader" scope=row>1</TH>
+    <TD class="l data">mean_i1</TD>
+    <TD class="l data">Num</TD>
+    <TD class="r data">8</TD>
+    <TD class="l data">Average number of drinks (standard units) consumed per 
+      day (in past 30 days) - Baseline</TD></TR></TBODY></TABLE></DIV></DIV><BR></DIV>
+<DIV class=branch>
+<P style="PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3>
+<A name=IDX22></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="c systemtitle">The SAS System</TD></TR></TBODY></TABLE><BR>
+<DIV>
+<DIV align=center>
+<TABLE cellSpacing=0 cellPadding=0 summary="Page Layout">
+  <TBODY>
+  <TR>
+    <TD><PRE class=batch>Frequency                                                                                         
+                                                                                                  
+   ‚                            *****      *****      *****                                       
+   ‚                            *****      *****      *****                                       
+   ‚                            *****      *****      *****                                       
+   ‚                            *****      *****      *****                                       
+20 ˆ                            *****      *****      *****                                       
+   ‚                            *****      *****      *****                                       
+   ‚                            *****      *****      *****                                       
+   ‚                            *****      *****      *****                                       
+   ‚                            *****      *****      *****                                       
+15 ˆ                            *****      *****      *****                                       
+   ‚                            *****      *****      *****                                       
+   ‚                            *****      *****      *****                                       
+   ‚                            *****      *****      *****                                       
+   ‚                            *****      *****      *****                                       
+10 ˆ                 *****      *****      *****      *****                                       
+   ‚                 *****      *****      *****      *****                                       
+   ‚                 *****      *****      *****      *****                                       
+   ‚                 *****      *****      *****      *****      *****      *****                 
+   ‚                 *****      *****      *****      *****      *****      *****                 
+ 5 ˆ                 *****      *****      *****      *****      *****      *****                 
+   ‚                 *****      *****      *****      *****      *****      *****                 
+   ‚                 *****      *****      *****      *****      *****      *****                 
+   ‚      *****      *****      *****      *****      *****      *****      *****      *****      
+   ‚      *****      *****      *****      *****      *****      *****      *****      *****      
+   Šƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ
+           15.9       16.5       17.1       17.7       18.3       18.9       19.5       20.1      
+                                                                                                  
+       Average number of drinks (standard units) consumed per day (in past 30 days) - Baseline    
+</PRE></TD></TR></TBODY></TABLE></DIV></DIV><BR></DIV>
+<DIV class=branch>
+<P style="PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3>
+<A name=IDX23></A>
+<TABLE class=systitleandfootercontainer cellSpacing=1 cellPadding=1 rules=none 
+width="100%" summary="Page Layout" border=0 frame=void>
+  <TBODY>
+  <TR>
+    <TD class="c systemtitle">The SAS System</TD></TR></TBODY></TABLE><BR>
+<DIV>
+<DIV align=center>
+<TABLE class=table borderColor=#c1c1c1 cellSpacing=0 cellPadding=5 rules=all 
+summary="Procedure Print: Data Set WORK.BOOTSTAT" frame=box>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class="l header" scope=col>Name</TH>
+    <TH class="r header" scope=col>Observed Statistic</TH>
+    <TH class="r header" scope=col>Bootstrap Mean</TH>
+    <TH class="r header" scope=col>Approximate Bias</TH>
+    <TH class="r header" scope=col>Approximate<BR>Standard Error</TH>
+    <TH class="r header" scope=col>Approximate<BR>Lower Confidence<BR>Limit</TH>
+    <TH class="r header" scope=col>Bias-Corrected<BR>Statistic</TH>
+    <TH class="r header" scope=col>Approximate<BR>Upper Confidence<BR>Limit</TH>
+    <TH class="r header" scope=col>Confidence<BR>Level (%)</TH>
+    <TH class="l header" scope=col>Method for Confidence<BR>Interval</TH>
+    <TH class="r header" scope=col>Minimum Resampled<BR>Estimate</TH>
+    <TH class="r header" scope=col>Maximum Resampled<BR>Estimate</TH>
+    <TH class="r header" scope=col>Number of<BR>Resamples</TH>
+    <TH class="l header" scope=col>LABEL OF FORMER VARIABLE</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class="l rowheader" scope=row>mean_i1</TH>
+    <TD class="r data">17.9073</TD>
+    <TD class="r data">17.8268</TD>
+    <TD class="r data" noWrap>-0.080486</TD>
+    <TD class="r data">0.89658</TD>
+    <TD class="r data">16.2305</TD>
+    <TD class="r data">17.9878</TD>
+    <TD class="r data">19.7450</TD>
+    <TD class="r data">95</TD>
+    <TD class="l data">Bootstrap Normal</TD>
+    <TD class="r data">15.8565</TD>
+    <TD class="r data">20.1722</TD>
+    <TD class="r data">100</TD>
+    <TD class="l data">Average number of drinks (standard units) consumed per 
+      day (in past 30 days) - 
+Baseline</TD></TR></TBODY></TABLE></DIV></DIV><BR></DIV></BODY></HTML>
