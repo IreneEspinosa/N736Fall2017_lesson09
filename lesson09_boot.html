@@ -126,39 +126,36 @@ $(document).ready(function () {
 
 <div id="bootstrapping" class="section level2">
 <h2>Bootstrapping</h2>
-<p>Intro here on bootstrapping - and add links and stuff to read</p>
-<p><em>OLD STUFF</em></p>
-<p>This lesson focuses on describing and summarizing your data by groups and/or looking at bi-variate associations given the type of each variable:</p>
+<p>Boostrapping is a non-parametric approach for computing statistical estimates using a resampling approach as the basis for estimating variance in the data. The idea is to take the sample data and treat it as your “population” from which you take repeated samples. Then compute the statistic you’re interested in from each sample and then look at the distribution of that statistic across all of the repeated samples. Here is the basic workflow:</p>
+<ol style="list-style-type: decimal">
+<li>Let’s say the sample has BMI’s (body mass indexes) for 100 people - this is the ORIGINAL sample.</li>
+<li>Take a random sample of 100 (yes, the same sample size) WITH REPLACEMENT from your original sample.</li>
+<li>Compute the statistics you are interested in - for example, the median - save this estimate of the median as MEDIAN Estimate 1.</li>
+<li>Repeat steps 2 and 3 a bunch of times, like 1000 (typically you do this 500, 1000, or 2000+ times) - and save all of the resulting estimates of the statistic tyou are interested in.</li>
+<li>You now have 1000 sample medians.</li>
+<li>Find the Median of these 1000 sample medians and a “95% confidence interval” for this estimate; use this “confidence interval” for the sample median to do inference - to answer the question is the sample median significantly different from 0, just look to see if the confidence interval for these bootstrapped sample medians contains 0 or not.</li>
+</ol>
+<p><em>NOTE: There are multiple approaches for computing this 95% confidence interval for the bootstrapped estimate, so be sure to read the documentation for the method and software you choose.</em></p>
+</div>
+<div id="useful-links" class="section level2">
+<h2>Useful links:</h2>
 <ul>
-<li>continuous - continuous
+<li>General Information
 <ul>
-<li>Pearon’s R</li>
-<li>Spearman’s rho (non-parametric)</li>
-<li>Kendall’s Tau (non-parametric)</li>
+<li><a href="https://onlinecourses.science.psu.edu/stat555/node/119" class="uri">https://onlinecourses.science.psu.edu/stat555/node/119</a></li>
 </ul></li>
-<li>continuous - ordinal (or ordinal - ordinal)
+<li>Boostrapping Using <code>SAS</code>
 <ul>
-<li>Spearman’s rho (non-parametric)</li>
-<li>Kendall’s Tau (non-parametric)</li>
+<li><a href="https://blogs.sas.com/content/iml/2016/08/10/bootstrap-confidence-interval-sas.html" class="uri">https://blogs.sas.com/content/iml/2016/08/10/bootstrap-confidence-interval-sas.html</a></li>
+<li><a href="http://www2.sas.com/proceedings/sugi29/193-29.pdf" class="uri">http://www2.sas.com/proceedings/sugi29/193-29.pdf</a></li>
+<li><a href="https://stats.idre.ucla.edu/sas/faq/how-can-i-bootstrap-estimates-in-sas/" class="uri">https://stats.idre.ucla.edu/sas/faq/how-can-i-bootstrap-estimates-in-sas/</a></li>
 </ul></li>
-<li>categorical - ordinal or continuous
+<li>Boostrapping Using <code>R</code>
 <ul>
-<li>2 independent groups
-<ul>
-<li>t-test</li>
-<li>Mann Whitney (non-parametric) test</li>
-</ul></li>
-<li>3 or more independent groups
-<ul>
-<li>ANOVA</li>
-<li>Kruskal-Wallis (non-parametric ANOVA)</li>
-</ul></li>
-</ul></li>
-<li>categorical - categorical
-<ul>
-<li>Chi-square tests (when &lt;20% of cells have expected counts &lt; 5)</li>
-<li>for 2x2, Fisher’s Exact Test (when 20%+ cells have expected counts &lt; 5)</li>
-<li>for rxc, Fisher-Freeman-Halton Test (when 20%+ cells have expected counts &lt; 5)</li>
+<li><a href="http://www.statmethods.net/advstats/bootstrapping.html" class="uri">http://www.statmethods.net/advstats/bootstrapping.html</a></li>
+<li><a href="https://stats.idre.ucla.edu/r/faq/how-can-i-generate-bootstrap-statistics-in-r/" class="uri">https://stats.idre.ucla.edu/r/faq/how-can-i-generate-bootstrap-statistics-in-r/</a></li>
+<li><a href="https://cran.r-project.org/doc/Rnews/Rnews_2002-3.pdf" class="uri">https://cran.r-project.org/doc/Rnews/Rnews_2002-3.pdf</a></li>
+<li><a href="https://socserv.socsci.mcmaster.ca/jfox/Books/Companion/appendix/Appendix-Bootstrapping.pdf" class="uri">https://socserv.socsci.mcmaster.ca/jfox/Books/Companion/appendix/Appendix-Bootstrapping.pdf</a></li>
 </ul></li>
 </ul>
 </div>
@@ -168,11 +165,11 @@ $(document).ready(function () {
 </div>
 <div id="r-code" class="section level2">
 <h2>R Code</h2>
-<p>Run examples shown in <code>lesson08_Rcode.R</code></p>
+<p>Run examples shown in <code>lesson09_Rcode.R</code></p>
 </div>
 <div id="sas-code" class="section level2">
 <h2>SAS Code</h2>
-<p>Run examples shown in <code>lesson08_SAScode.sas</code></p>
+<p>Run examples shown in <code>lesson09_SAScode.sas</code></p>
 </div>
 
 

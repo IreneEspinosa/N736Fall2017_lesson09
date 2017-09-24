@@ -1,10 +1,10 @@
 #' =======================================
 #' Working with the HELP dataset
 #' 
-#' Bivariate Stats
+#' Introduction to Bootstrapping
 #' 
 #' Melinda Higgins, PhD
-#' dated 09/19/2017
+#' dated 09/25/2017
 #' =======================================
 
 library(dplyr)

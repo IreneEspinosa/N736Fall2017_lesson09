@@ -13,38 +13,30 @@ knitr::opts_chunk$set(warning = FALSE)
 
 ## Bootstrapping
 
-Intro here on bootstrapping - and add links and stuff to read
+Boostrapping is a non-parametric approach for computing statistical estimates using a resampling approach as the basis for estimating variance in the data. The idea is to take the sample data and treat it as your "population" from which you take repeated samples. Then compute the statistic you're interested in from each sample and then look at the distribution of that statistic across all of the repeated samples. Here is the basic workflow:
 
+1. Let's say the sample has BMI's (body mass indexes) for 100 people - this is the ORIGINAL sample.
+2. Take a random sample of 100 (yes, the same sample size) WITH REPLACEMENT from your original sample.
+3. Compute the statistics you are interested in - for example, the median - save this estimate of the median as MEDIAN Estimate 1.
+4. Repeat steps 2 and 3 a bunch of times, like 1000 (typically you do this 500, 1000, or 2000+ times) - and save all of the resulting estimates of the statistic tyou are interested in.
+5. You now have 1000 sample medians.
+6. Find the Median of these 1000 sample medians and a "95% confidence interval" for this estimate; use this "confidence interval" for the sample median to do inference - to answer the question is the sample median significantly different from 0, just look to see if the confidence interval for these bootstrapped sample medians contains 0 or not.
 
+_NOTE: There are multiple approaches for computing this 95% confidence interval for the bootstrapped estimate, so be sure to read the documentation for the method and software you choose._
 
+## Useful links:
 
-
-_OLD STUFF_
-
-This lesson focuses on describing and summarizing your data by groups and/or looking at bi-variate associations given the type of each variable:
-
-* continuous - continuous
-    - Pearon's R
-    - Spearman's rho (non-parametric)
-    - Kendall's Tau (non-parametric)
-    
-* continuous - ordinal (or ordinal - ordinal)
-    - Spearman's rho (non-parametric)
-    - Kendall's Tau (non-parametric)
-    
-* categorical - ordinal or continuous
-    - 2 independent groups
-        - t-test
-        - Mann Whitney (non-parametric) test
-    - 3 or more independent groups
-        - ANOVA
-        - Kruskal-Wallis (non-parametric ANOVA)
-        
-* categorical - categorical
-    - Chi-square tests (when <20% of cells have expected counts < 5)
-    - for 2x2, Fisher's Exact Test (when 20%+ cells have expected counts < 5)
-    - for rxc, Fisher-Freeman-Halton Test (when 20%+ cells have expected counts < 5)
-    
+* General Information
+    - [https://onlinecourses.science.psu.edu/stat555/node/119](https://onlinecourses.science.psu.edu/stat555/node/119)
+* Boostrapping Using `SAS`
+    - [https://blogs.sas.com/content/iml/2016/08/10/bootstrap-confidence-interval-sas.html](https://blogs.sas.com/content/iml/2016/08/10/bootstrap-confidence-interval-sas.html)
+    - [http://www2.sas.com/proceedings/sugi29/193-29.pdf](http://www2.sas.com/proceedings/sugi29/193-29.pdf)
+    - [https://stats.idre.ucla.edu/sas/faq/how-can-i-bootstrap-estimates-in-sas/](https://stats.idre.ucla.edu/sas/faq/how-can-i-bootstrap-estimates-in-sas/)
+* Boostrapping Using `R`
+    - [http://www.statmethods.net/advstats/bootstrapping.html](http://www.statmethods.net/advstats/bootstrapping.html)
+    - [https://stats.idre.ucla.edu/r/faq/how-can-i-generate-bootstrap-statistics-in-r/](https://stats.idre.ucla.edu/r/faq/how-can-i-generate-bootstrap-statistics-in-r/)
+    - [https://cran.r-project.org/doc/Rnews/Rnews_2002-3.pdf](https://cran.r-project.org/doc/Rnews/Rnews_2002-3.pdf)
+    - [https://socserv.socsci.mcmaster.ca/jfox/Books/Companion/appendix/Appendix-Bootstrapping.pdf](https://socserv.socsci.mcmaster.ca/jfox/Books/Companion/appendix/Appendix-Bootstrapping.pdf)
 
 ## The HELP Dataset 
 
@@ -52,9 +44,9 @@ We are still working with the HELP (Health Evaluation and Linkage to Primary Car
 
 ## R Code
 
-Run examples shown in `lesson08_Rcode.R`
+Run examples shown in `lesson09_Rcode.R`
 
 ## SAS Code
 
-Run examples shown in `lesson08_SAScode.sas`
+Run examples shown in `lesson09_SAScode.sas`
 
