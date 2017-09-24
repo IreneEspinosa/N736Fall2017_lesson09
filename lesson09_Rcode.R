@@ -21,226 +21,132 @@ load("help.Rdata")
 # list variables in HELP dataset
 names(helpdata)
 
-# let's look at age, female, racegrp, cesd, pcs and mcs.
-helpset1 <- helpdata %>%
-  select(age, female, racegrp, cesd, pcs, mcs)
+# let's look i1 which is "Average number of drinks (standard units) 
+# consumed per day (in past 30 days) - Baseline"
+summary(helpdata$i1)
+mean(helpdata$i1)
+sd(helpdata$i1)
+hist(helpdata$i1)
 
-# simple summary
-summary(helpset1)
+# Suppose we want to know if the average number of 
+# drinks consumed per day (in the past 30 days)
+# significantly exceeds 15.
+# Test Null Hypothesis 
+#      H0: avg<=15 versus
+#      Ha: avg>15
 
-# let's make female a factor
-# with appropriate labels and levels defined
-helpset1$femaleF <- factor(helpset1$female,
-                           levels=c(0,1),
-                           labels=c("male","female"))
+# we could (naively) run a parametric one-sample t-test for 15
+# which assumes that the underlying distribution
+# is normal. The distribution of i1 is NOT normal - it is
+# very right skewed because it is a count
+t.test(helpdata$i1,mu=15)
 
-# check
-table(helpset1$female)
-table(helpset1$femaleF)
+# suppose we assume a Poisson distribution
+# which is appropriate for count data
+# NOTE: To be a true Poisson the
+# mean should be equal to the standard deviation (SD)
+# as we see above, the mean for these i1 data
+# is smaller than the SD, so it is slightly overdispersed
+# overdispersion is when SD > mean
+# x is the total number of observed events
+# T is the sample size
+# r is the "rate" expected, i.e. the "mean"
+poisson.test(x=sum(helpdata$i1),
+             T=length(helpdata$i1), 
+             r=15)
 
-# let's merge hispanic/other together for race
-helpset1$race3[helpset1$racegrp == "black"] <- "Black"
-helpset1$race3[helpset1$racegrp == "white"] <- "White"
-helpset1$race3[helpset1$racegrp == "hispanic"] <- "Hisp/Other"
-helpset1$race3[helpset1$racegrp == "other"] <- "Hisp/Other"
+# here is a quick plot of these distributions overlaid
+# on a histogram of our data
+hist(helpdata$i1, freq=F, breaks=12,
+     main="Histogram of Number of Drinks Per Day")
+lines(density(helpdata$i1), col="red")
+x <- seq(0, 150, by=1)
+y <- dnorm(x=x,
+           mean=mean(helpdata$i1), 
+           sd=sd(helpdata$i1))
+lines(x, y, col="blue")
+x <- seq(0, 150, by=1)
+y <- dpois(x=x, lambda=15)
+lines(x, y, col="green")
+legend("topright", 
+       c("data", "density","normal","Poisson"), 
+       fill=c("black","red","blue","green"))
 
-# check - use head() to see rows 50-60
-# these rows have all 4 races 
-helpset1[50:60,c("racegrp", "race3")]
+# So, our i1 data is NOT normal and it is NOT exactly Poisson
+# we need another way to make estimations and inferences
+# the boostrap is a good non-parametric method to use
+library(boot)
 
-# =======================================
-# continuous - continuous
-# =======================================
-# 1st - are these normal?
+# let's get a better estimate of the mean
+# and inference for the mean
 
-ggplot(helpset1, aes(x=age)) + 
-  geom_histogram(aes(y=..density..), 
-                 binwidth=5,
-                 colour="black", fill="white") +
-  geom_density(alpha=.2, fill="#FF6666") +
-  labs(title="Histogram of Age")
+# x = data
+# d = indices used to track each of the
+# 1000 bootstrapped samples
+samplemean <- function(x, d) {
+  return(mean(x[d]))
+}
+x <- helpdata$i1
+b <- boot(x, samplemean, R=1000)
 
-qqnorm(helpset1$age)
-qqline(helpset1$age)
+# look at the summary stats
+# for the 1000 means
+# "t" is what the boot() method uses for
+# your statistic of interest - this 
+# is NOT the t-test statistics, "t" just
+# stands for the statistic.
+min(b$t)
+max(b$t)
+mean(b$t)
+median(b$t)
+table(b$t)
+barplot(table(b$t))
 
-library(car)
-car::qqPlot(helpset1$age)
+# histogram of the 1000 means
+hist(b$t)
 
-library(ggpubr)
-ggqqplot(helpset1$age)
+# view results
+plot(b)
 
-# Shapiro-Wilk's test of normality - better test
-shapiro.test(helpset1$age)
+bci.mean <- boot.ci(b, type="bca")
+bci.mean
 
-# Kolmogorov_Smirnov test of normality
-ks.test(helpset1$age, "pnorm")
+# Suppose we want to know if the average number of 
+# drinks consumed per day (in the past 30 days)
+# significantly exceeds 15.
+# Test Null Hypothesis 
+#      H0: avg<=15 versus
+#      Ha: avg>15
+# we still are running a two-sided test here...
 
-# get skewness and kurtosis
-library(e1071)
-e1071::skewness(helpset1$age)
-e1071::kurtosis(helpset1$age)
+# We would reject this null hypothesis
+# and conclude that the mean # of drinks is > 15.
+# the 95% BCa CI is (16.17, 19.83).
+bci.mean
 
-# skip
-#library(moments)
-#moments::skewness(helpset1$age)
-#moments::kurtosis(helpset1$age)
+# unadjusted t-test 95% confidence intervals
+tt <- t.test(helpdata$i1, conf.level = 0.95)
 
-#skip
-#library(propagate)
-#propagate::skewness(helpset1$age)
-#propagate::kurtosis(helpset1$age)
+# 2.5th, 97.5th percentiles
+# of the bootstrapped means
+# these are the unadjusted CIs
+qbt <- quantile(b$t,
+                probs=c(.025,.975))
 
-library(psych)
-psych::skew(helpset1$age)
-psych::kurtosi(helpset1$age)
-psych::mardia(helpset1$age)
-psych::describe(helpset1$age)
+# 4 types possible from boot.ci()
+boot.ci(b, type="all")
 
-# look at cesd, pcs and mcs
-ggplot(helpset1, aes(x=cesd)) + 
-  geom_histogram(aes(y=..density..), 
-                 binwidth=5,
-                 colour="black", fill="white") +
-  geom_density(alpha=.2, fill="#FF6666") +
-  labs(title="Histogram of CESD")
+# =========================================
+# OPTIONAL - SKIP
+# table 
+bci.mean$bca[4:5]
+tt$conf.int
+qbt
 
-qqnorm(helpset1$cesd,
-       main="QQ Plot of CESD")
-qqline(helpset1$cesd)
+df <- data.frame(bci.mean$bca[4:5],
+                 tt$conf.int,
+                 qbt)
 
-psych::describe(helpset1$cesd)
-shapiro.test(helpset1$cesd)
-
-ggplot(helpset1, aes(x=pcs)) + 
-  geom_histogram(aes(y=..density..), 
-                 binwidth=5,
-                 colour="black", fill="white") +
-  geom_density(alpha=.2, fill="#FF6666") +
-  labs(title="Histogram of PCS")
-
-qqnorm(helpset1$pcs,
-       main="QQ Plot of PCS")
-qqline(helpset1$pcs)
-
-psych::describe(helpset1$pcs)
-shapiro.test(helpset1$pcs)
-
-ggplot(helpset1, aes(x=mcs)) + 
-  geom_histogram(aes(y=..density..), 
-                 binwidth=5,
-                 colour="black", fill="white") +
-  geom_density(alpha=.2, fill="#FF6666") +
-  labs(title="Histogram of MCS")
-
-qqnorm(helpset1$mcs,
-       main="QQ Plot of MCS")
-qqline(helpset1$mcs)
-
-psych::describe(helpset1$mcs)
-shapiro.test(helpset1$mcs)
-
-library(pastecs)
-vars <- c("age","cesd","pcs","mcs")
-options(scipen=100)
-options(digits=3)
-stat.desc(helpset1[,vars], 
-          basic=TRUE,
-          norm=TRUE)
-
-# we can use knitr::kable()
-# with rmarkdown to get a nice table
-stat.table <- stat.desc(helpset1[,vars], 
-                        basic=TRUE,
-                        norm=TRUE)
-knitr::kable(stat.table,
-             digits=3,
-             caption="Descriptive Stats for Numeric Vars")
-
-# =======================================
-# continuous - continuous
-# =======================================
-# parametric Pearson's R correlation
-# non-parametric Spearman's rho
-# non-parametric Kendall's tau - good for rank ties
-
-cor(helpset1[,vars],
-    method="pearson")
-cor(helpset1[,vars],
-    method="spearman")
-cor(helpset1[,vars],
-    method="kendall")
-
-# can also use the corr.test() in the psych
-# package to get the p-values, t-tests,
-# and confidence intervals, in addition to
-# the correlations
-psych::corr.test(helpset1[,vars],
-                 method="pearson")
-
-# save the results
-pc <- psych::corr.test(helpset1[,vars],
-                       method="pearson")
-# look at correlations
-pc$r
-
-# t-test for each correlation
-pc$t
-
-# p-value of each t-test for correlation
-pc$p
-
-# confidence intervals for each pair
-# removes the diagonal values and tests
-pc$ci
-
-# also look at spearmans rho
-pc <- psych::corr.test(helpset1[,vars],
-                       method="spearman")
-pc$ci
-
-# =======================================
-# continuous with 2-group categorical
-# =======================================
-# this is basically a t-test
-vars <- c("female","age","cesd")
-pc <- psych::corr.test(helpset1[,vars],
-                       method="pearson")
-pc$ci
-
-pc$t
-
-# compare to running a t-test
-options(digits=8)
-t.test(age ~ female, helpset1)
-t.test(cesd ~ female, helpset1)
-
-# non-parametric 2-group tests
-# Mann Whitney U test
-wilcox.test(age ~ female, helpset1)
-wilcox.test(cesd ~ female, helpset1)
-
-# =======================================
-# categorical - categorical
-# =======================================
-library(gmodels)
-
-# basic table - formatted like SAS
-CrossTable(helpset1$race3, helpset1$female)
-
-# remove row%, total%, chisq contribution
-CrossTable(helpset1$race3, helpset1$female,
-           expected=TRUE,
-           prop.r=FALSE,
-           prop.t=FALSE,
-           prop.chisq=FALSE)
-
-# add chi-square test of independence
-# and Fisher's Exact Test
-# learn more help(fisher.test)
-CrossTable(helpset1$race3, helpset1$female,
-           expected=TRUE,
-           prop.r=FALSE,
-           prop.t=FALSE,
-           prop.chisq=FALSE,
-           chisq=TRUE,
-           fisher=TRUE)
+# when in rmarkdown
+library(knitr)
+knitr::kable(df)
